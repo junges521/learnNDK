@@ -117,7 +117,7 @@ int check_signature(JNIEnv *env) {
     int cmpVal = strcmp(strAry, app_signature);
     (env)->ReleaseStringUTFChars(obj, strAry);
 
-    if (cmpVal == 0)
+    if (cmpVal != 0)
         return JNI_TRUE;
     else
         return JNI_FALSE;
